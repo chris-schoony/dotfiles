@@ -1,17 +1,18 @@
 export EDITOR=nvim
 
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # alias
 alias ls="eza --icons"
 alias la="eza -l --icons --git -a"
 alias kb="sudo sh -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'"
 
+# starship
 eval "$(starship init zsh)"
 
 # functions
