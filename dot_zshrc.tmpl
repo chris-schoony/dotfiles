@@ -12,6 +12,9 @@ alias ls="eza --icons"
 alias la="eza -l --icons --git -a"
 alias dfe="chezmoi edit"
 alias dfc="chezmoi cd"
+alias dfd="chezmoi diff"
+alias dfa="chezmoi apply -v"
+alias dfu="chezmoi update -v"
 {{- if eq .chezmoi.hostname "pc" }}
 alias kb="sudo sh -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'"
 {{- end }}
