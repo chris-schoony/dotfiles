@@ -11,7 +11,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: 'Mononoki Nerd Font Propo';
+  font-family: "Mononoki Nerd Font Propo";
   font-size: 16px;
 }
 
@@ -55,6 +55,15 @@ window#waybar {
   padding: 4px 10px;
   margin: 0;
   color: @font;
+  background: @bg;
+  border-radius: 4px;
+  border: 2px solid @bg-light;
+}
+
+#battery {
+  padding: 4px 10px;
+  margin-right: 6px;
+  color: @font-battery;
   background: @bg;
   border-radius: 4px;
   border: 2px solid @bg-light;
