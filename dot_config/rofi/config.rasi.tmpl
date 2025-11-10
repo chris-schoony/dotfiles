@@ -1,0 +1,78 @@
+configuration {
+  display-drun: "Applications";
+  drun-display-format: "{icon} {name}";
+  {{- if eq .chezmoi.hostname "pc" }}
+  font: "Mononoki Nerd Font 20";
+  {{- else if eq .chezmoi.hostname "chris_laptop" }}
+  font: "Mononoki Nerd Font 14";
+  {{- end }}
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #181825;
+  bg-alt: #313244;
+  text: #cdd6f4;
+  text-alt: #cba6f7;
+  text-selected: #fab387;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+window {
+  {{- if eq .chezmoi.hostname "pc" }}
+  width: 35%;
+  {{- else if eq .chezmoi.hostname "chris_laptop" }}
+  width: 50%;
+  {{- end }}
+  border-radius: 10;
+}
+
+element {
+  padding: 16;
+}
+
+entry {
+  text-color: @text;
+  background-color: @bg-alt;
+  padding: 16;
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 16 0 0 16;
+  text-color: @text-alt;
+}
+
+element-text {
+  text-color: @text;
+  vertical-align: 0.5;
+  highlight: none;
+}
+
+element-icon {
+  size: 32;
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+}
+
+element-text selected {
+  text-color: @text-selected;
+}
