@@ -10,6 +10,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # alias
 alias ls="eza --icons"
 alias la="eza -l --icons --git -a"
+alias dfe="chezmoi edit"
+alias dfc="chezmoi cd"
 {{- if eq .chezmoi.hostname "pc" }}
 alias kb="sudo sh -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'"
 {{- end }}
