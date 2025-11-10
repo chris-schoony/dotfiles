@@ -1,0 +1,109 @@
+@define-color font #cdd6f4;
+@define-color font-dark #181825;
+@define-color font-empty-workspace #585b70;
+@define-color font-audio #cba6f7;
+@define-color font-battery #89b4fa;
+@define-color bg #313244;
+@define-color bg-light #45475a;
+@define-color bg-focused-workspace #fab387;
+@define-color bg-music #cba6f7;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'Mononoki Nerd Font Propo';
+  font-size: 16px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#workspaces {
+  padding: 4px 2px;
+  background: red;
+  background: @bg;
+  border-radius: 4px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 0 2px;
+  color: @font;
+  border-radius: 3px;
+}
+
+#workspaces button.empty {
+  color: @font-empty-workspace;
+}
+
+#workspaces button.active {
+  color: @font-dark;
+  background: @bg-focused-workspace;
+}
+
+#pulseaudio {
+  padding: 4px 10px;
+  margin-right: 6px;
+  color: @font-audio;
+  background: @bg;
+  border-radius: 4px;
+  border: 2px solid @bg-light;
+}
+
+#clock {
+  padding: 4px 10px;
+  margin: 0;
+  color: @font;
+  background: @bg;
+  border-radius: 4px;
+  border: 2px solid @bg-light;
+}
+
+#custom-music-prev {
+  padding: 4px 5px 4px 10px;
+  margin-left: 6px;
+  background: @bg-music;
+  color: @font-dark;
+  border-radius: 4px 0 0 4px;
+}
+
+#custom-music-play-pause {
+  padding: 4px 5px;
+  margin-left: 0;
+  background: @bg-music;
+  color: @font-dark;
+  border-radius: 0;
+}
+
+#custom-music-next {
+  padding: 4px 10px 4px 5px;
+  margin-left: 0;
+  background: @bg-music;
+  color: @font-dark;
+  border-radius: 0;
+}
+
+#custom-music-data {
+  padding: 4px 10px;
+  margin-left: 0;
+  background: @bg;
+  color: @font;
+  border-radius: 0 4px 4px 0;
+  border: solid @bg-light;
+  border-width: 2px 2px 2px 0;
+}
+
+#tray {
+  padding: 4px 10px;
+  margin-right: 6px;
+  background: @bg;
+  color: @font;
+  border: 2px solid @bg-light;
+  border-radius: 4px;
+}
+
+#tray menu {
+  background: @bg;
+  color: @font;
+}

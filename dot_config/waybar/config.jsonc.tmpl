@@ -1,0 +1,89 @@
+{
+  "position": "bottom",
+  "margin": "0 8 8 8",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/music-prev",
+    "custom/music-play-pause",
+    "custom/music-next",
+    "custom/music-data"
+  ],
+  "modules-right": [
+    "tray",
+    {{- if eq .chezmoi.hostname "chris_laptop" }}
+    "battery",
+    {{- end }}
+    "pulseaudio",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "pulseaudio": {
+    "format": "󰕾 {volume}",
+    "format-muted": "󰖁 {volume}",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pwvucontrol",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+  {{- if eq .chezmoi.hostname "chris_laptop" }}
+    "battery": {
+    "format": "{icon} {capacity}",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "format-charging": "󰂄 {capacity}",
+    "format-plugged": "󰂄 {capacity}"
+  },
+  {{- end }}
+  "custom/music-prev": {
+    "format": "{}",
+    "interval": 1,
+    "on-click": "playerctl -p tidal-hifi previous",
+    "exec": "$HOME/.config/waybar/scripts/prev.sh 2> /dev/null",
+    "exec-if": "pgrep tidal-hifi",
+    "tooltip": false
+  },
+  "custom/music-play-pause": {
+    "format": "{}",
+    "interval": 1,
+    "on-click": "playerctl -p tidal-hifi play-pause",
+    "exec": "$HOME/.config/waybar/scripts/play_pause.sh 2> /dev/null",
+    "exec-if": "pgrep tidal-hifi",
+    "tooltip": false
+  },
+  "custom/music-next": {
+    "format": "{}",
+    "interval": 1,
+    "on-click": "playerctl -p tidal-hifi next",
+    "exec": "$HOME/.config/waybar/scripts/next.sh 2> /dev/null",
+    "exec-if": "pgrep tidal-hifi",
+    "tooltip": false
+  },
+  "custom/music-data": {
+    "format": "{}",
+    "interval": 1,
+    "exec": "$HOME/.config/waybar/scripts/song_info.sh 2> /dev/null",
+    "exec-if": "pgrep tidal-hifi",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 6,
+    "reverse-direction": true
+  }
+}
