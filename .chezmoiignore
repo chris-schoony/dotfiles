@@ -1,8 +1,8 @@
 README.md
 {{- if ne .chezmoi.os "linux" }}
-.config/rofi/*
-.config/hypr/*
-.config/waybar/*
+.config/rofi
+.config/hypr
+.config/waybar
 {{- end }}
 {{- if ne .chezmoi.os "darwin" }}
 .aerospace.toml
