@@ -27,7 +27,11 @@ window#waybar {
 }
 
 #workspaces button {
+  {{- if eq .chezmoi.hostname "pc" }}
   padding: 0 10px;
+  {{- else if eq .chezmoi.hostname "chris_laptop" }}
+  padding: 0 6px;
+  {{- end }}
   margin: 0 2px;
   color: @font;
   border-radius: 3px;
