@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.hostname "pc" -}}
 monitor = DP-4, 3440x1440@120, 0x0, 1
 {{- else if eq .chezmoi.hostname "chris_laptop" -}}
-monitor = eDP-1, 2880x1920@120, 0x0, 1.875
+monitor = eDP-1, highres@120, 0x0, 1.875
 {{- end }}
 
 $terminal = ghostty
@@ -30,6 +30,10 @@ general {
     border_size = 0
     allow_tearing = false
     layout = dwindle
+}
+
+xwayland {
+  force_zero_scaling = true
 }
 
 decoration {
