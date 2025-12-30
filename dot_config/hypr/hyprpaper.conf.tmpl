@@ -1,8 +1,13 @@
-preload = ~/.config/hypr/wallpaper.webp
-{{- if eq .chezmoi.hostname "pc" }}
-wallpaper = DP-4,~/.config/hypr/wallpaper.webp
-{{- else if eq .chezmoi.hostname "chris_laptop" }}
-wallpaper = eDP-1,~/.config/hypr/wallpaper.webp
+{{- if eq .chezmoi.hostname "pc" -}}
+wallpaper {
+  monitor = DP-4
+  path = ~/.config/hypr/wallpaper.webp
+}
+{{- else if eq .chezmoi.hostname "chris_laptop" -}}
+wallpaper {
+  monitor = eDP-1
+  path = ~/.config/hypr/wallpaper.webp
+}
 {{- end }}
 splash = false
 ipc = off
