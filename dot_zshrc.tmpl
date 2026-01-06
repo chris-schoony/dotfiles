@@ -24,15 +24,15 @@ eval "$(starship init zsh)"
 
 # functions
 v () { 
-  nvim $1
+  nvim $*
 }
 
 p () {
-  pnpm $1
+  pnpm $*
 }
 
 px () {
-  pnpm dlx $1
+  pnpm dlx $*
 }
 
 # asdf
