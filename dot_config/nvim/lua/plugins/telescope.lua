@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	version = "*",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{
@@ -28,14 +29,6 @@ return {
 					override_generic_sorter = true,
 					override_file_sorter = true,
 					case_mode = "smart_case",
-				},
-			},
-			defaults = {
-				sorting_strategy = "ascending",
-				layout_config = {
-					horizontal = {
-						prompt_position = "top",
-					},
 				},
 			},
 		})
