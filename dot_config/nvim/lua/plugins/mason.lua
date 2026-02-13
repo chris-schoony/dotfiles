@@ -13,6 +13,7 @@ return {
 			"mdx_analyzer",
 			"glsl_analyzer",
 			"jsonls",
+			"ols",
 		},
 	},
 	dependencies = {
