@@ -9,7 +9,7 @@ return {
 			"gopls",
 			"astro",
 			"tailwindcss",
-			"ts_ls",
+			"tsgo",
 			"mdx_analyzer",
 			"glsl_analyzer",
 			"jsonls",
