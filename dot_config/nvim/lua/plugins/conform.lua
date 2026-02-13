@@ -6,6 +6,13 @@ return {
 			timeout_ms = 500,
 			lsp_fallback = true,
 		},
+		formatters = {
+			odinfmt = {
+				command = "odinfmt",
+				args = { "-stdin" },
+				stdin = true,
+			},
+		},
 		formatters_by_ft = {
 			lua = { "stylua" },
 			css = { "prettier" },
@@ -17,6 +24,7 @@ return {
 			astro = { "prettier" },
 			go = { "gofumpt" },
 			json = { "prettier" },
+			odin = { "odinfmt" },
 		},
 	},
 }
