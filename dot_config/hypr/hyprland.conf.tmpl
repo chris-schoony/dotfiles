@@ -6,6 +6,7 @@ monitor = eDP-1, highres@120, 0x0, 1.875
 
 $terminal = ghostty
 $menu = rofi -show drun
+$lock = hyprlock
 
 env = XCURSOR_SIZE,24
 env = HYPRCURSE_SIZE,24
@@ -119,6 +120,7 @@ bind = SUPER, s, exec, hyprshot -z -m region --clipboard-only
 bind = Alt_L, n, exec, swaync-client -t -sw
 
 bind = Alt_L, Q, killactive
+bind = Control_L Alt_L, l, exec, $lock
 
 bind = Alt_L, h, movefocus, l
 bind = Alt_L, j, movefocus, d
