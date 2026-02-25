@@ -40,3 +40,8 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # odin
 export PATH="$HOME/Odin:$PATH"
+
+{{- if eq .chezmoi.username "chris.schoonover" }}
+unset GEM_HOME
+alias prs="glow ~/pr-reviews/$(date +%Y/%m/%d/)"
+{{- end }}
