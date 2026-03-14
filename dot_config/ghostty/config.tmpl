@@ -4,8 +4,8 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 window-padding-balance = true
-window-padding-x = 6
 {{- if eq .chezmoi.hostname "pc" }}
+window-padding-x = 6
 font-size = 16
 {{- else if eq .chezmoi.hostname "chris_laptop" }}
 font-size = 16
@@ -13,4 +13,5 @@ font-size = 16
 font-size = 24
 macos-titlebar-style = hidden
 window-padding-y = 6
+window-padding-x = 12
 {{- end }}
