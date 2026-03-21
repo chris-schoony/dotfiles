@@ -1,5 +1,5 @@
 configuration {
-  display-drun: " ";
+  display-drun: "";
   drun-display-format: "{icon} {name}";
   {{- if eq .chezmoi.hostname "pc" }}
   font: "Mononoki Nerd Font 20";
@@ -34,7 +34,7 @@ inputbar {
 
 window {
   {{- if eq .chezmoi.hostname "pc" }}
-  width: 35%;
+  width: 15%;
   {{- else if eq .chezmoi.hostname "chris_laptop" }}
   width: 50%;
   {{- end }}
