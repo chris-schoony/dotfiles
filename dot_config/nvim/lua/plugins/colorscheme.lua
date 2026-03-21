@@ -1,10 +1,12 @@
 return {
-	"catppuccin/nvim",
+	"neanias/everforest-nvim",
+	version = false,
 	priority = 1000,
 	config = function()
-		require("catppuccin").setup({
-			flavour = "mocha",
+		local theme = require("everforest")
+		theme.setup({
+			background = "hard",
 		})
-		vim.cmd([[colorscheme catppuccin]])
+		theme.load()
 	end,
 }
