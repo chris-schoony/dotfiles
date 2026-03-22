@@ -1,78 +1,122 @@
 configuration {
+	modi: "drun";
   display-drun: "";
-  drun-display-format: "{icon} {name}";
-  {{- if eq .chezmoi.hostname "pc" }}
-  font: "Mononoki Nerd Font 20";
-  {{- else if eq .chezmoi.hostname "chris_laptop" }}
-  font: "Mononoki Nerd Font 14";
-  {{- end }}
-  modi: "drun";
+	drun-display-format: "{icon} {name}";
   show-icons: true;
-  icon-theme: "Papirus";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #181825;
-  bg-alt: #313244;
-  text: #cdd6f4;
-  text-alt: #cba6f7;
-  text-selected: #fab387;
-
-  background-color: @bg;
-  
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
-}
-
-inputbar {
-  children: [prompt, entry];
+    font: "Mononoki Nerd Font 20";
+    background: #272E33;
+    background-alt: #1E2326;
+    selected: #A7C080;
+    text: #D3C6AA;
+    text-dark: #374145;
 }
 
 window {
-  {{- if eq .chezmoi.hostname "pc" }}
-  width: 15%;
-  {{- else if eq .chezmoi.hostname "chris_laptop" }}
-  width: 50%;
-  {{- end }}
-  border-radius: 10;
+    transparency: "real";
+    width: 600px;
+    enabled: true;
+    border-radius: 20px;
+    cursor: "default";
+    background-color: @background;
 }
 
-element {
-  padding: 16;
+mainbox {
+    enabled: true;
+    spacing: 0px;
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing: 20px;
+    padding: 20px;
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "listview" ];
+}
+
+inputbar {
+    enabled: true;
+    spacing: 10px;
+    padding: 80px 60px;
+    background-color: transparent;
+    background-image: url("~/.config/rofi/rofi.webp", width);
+    text-color: @text;
+    orientation: horizontal;
+    children: [ "entry", "dummy" ];
 }
 
 entry {
-  text-color: @text;
-  background-color: @bg-alt;
-  padding: 16;
+    enabled: true;
+    expand: false;
+    width: 475px;
+    padding: 12px 16px;
+    border-radius: 100%;
+    background-color: @background-alt;
+    text-color: inherit;
+    cursor: text;
+    placeholder: "Search";
+    placeholder-color: inherit;
 }
-
-prompt {
-  background-color: @bg-alt;
-  enabled: true;
-  padding: 16 0 0 16;
-  text-color: @text-alt;
-}
-
-element-text {
-  text-color: @text;
-  vertical-align: 0.5;
-  highlight: none;
-}
-
-element-icon {
-  size: 32;
+dummy {
+    expand: true;
+    background-color: transparent;
 }
 
 listview {
-  columns: 1;
-  lines: 8;
+    enabled: true;
+    columns: 1;
+    lines: 7;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 10px;
+    background-color: transparent;
+    text-color: @text;
+    cursor: "default";
 }
 
-element-text selected {
-  text-color: @text-selected;
+element {
+    enabled: true;
+    spacing: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @text;
+    cursor: pointer;
 }
+
+element-text {
+  highlight: none;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @text-dark;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
