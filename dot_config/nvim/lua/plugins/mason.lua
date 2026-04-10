@@ -14,6 +14,7 @@ return {
 			"glsl_analyzer",
 			"jsonls",
 			"ols",
+			"clangd",
 		},
 	},
 	dependencies = {

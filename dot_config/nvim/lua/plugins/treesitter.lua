@@ -19,6 +19,7 @@ return {
 			"tmux",
 			"tsx",
 			"typescript",
+			"c",
 		})
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
@@ -36,6 +37,7 @@ return {
 				"tmux",
 				"tsx",
 				"typescript",
+				"c",
 			},
 			callback = function()
 				vim.treesitter.start()
