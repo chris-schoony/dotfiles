@@ -112,38 +112,38 @@ input {
     }
 }
 
-bind = Control_L, space, exec, $menu
-bind = Control_L, Return, exec, $terminal
+bind = SUPER, space, exec, $menu
+bind = SUPER, Return, exec, $terminal
 bind = SUPER, s, exec, hyprshot -z -m region --clipboard-only
 bind = SUPER, n, exec, swaync-client -t -sw
 
 bind = SUPER, Q, killactive
-bind = SUPER, l, exec, $lock
+bind = SUPER, x, exec, $lock
 bind = SUPER, f, togglefloating
 bindm = SUPER, mouse:272, movewindow
 bindm = SUPER, mouse:273, resizewindow
 
-bind = Alt_L, h, movefocus, l
-bind = Alt_L, j, movefocus, d
-bind = Alt_L, k, movefocus, u
-bind = Alt_L, l, movefocus, r
+bind = SUPER, h, movefocus, l
+bind = SUPER, j, movefocus, d
+bind = SUPER, k, movefocus, u
+bind = SUPER, l, movefocus, r
 
-bind = Alt_L SHIFT, h, movewindow, l
-bind = Alt_L SHIFT, j, movewindow, d
-bind = Alt_L SHIFT, k, movewindow, u
-bind = Alt_L SHIFT, l, movewindow, r
+bind = SUPER SHIFT, h, movewindow, l
+bind = SUPER SHIFT, j, movewindow, d
+bind = SUPER SHIFT, k, movewindow, u
+bind = SUPER SHIFT, l, movewindow, r
 
-bind = Control_L, 1, workspace, 1
-bind = Control_L, 2, workspace, 2
-bind = Control_L, 3, workspace, 3
-bind = Control_L, 4, workspace, 4
-bind = Control_L, 5, workspace, 5
+bind = SUPER, 1, workspace, 1
+bind = SUPER, 2, workspace, 2
+bind = SUPER, 3, workspace, 3
+bind = SUPER, 4, workspace, 4
+bind = SUPER, 5, workspace, 5
 
-bind = Control_L SHIFT, 1, movetoworkspace, 1
-bind = Control_L SHIFT, 2, movetoworkspace, 2
-bind = Control_L SHIFT, 3, movetoworkspace, 3
-bind = Control_L SHIFT, 4, movetoworkspace, 4
-bind = Control_L SHIFT, 5, movetoworkspace, 5
+bind = SUPER SHIFT, 1, movetoworkspace, 1
+bind = SUPER SHIFT, 2, movetoworkspace, 2
+bind = SUPER SHIFT, 3, movetoworkspace, 3
+bind = SUPER SHIFT, 4, movetoworkspace, 4
+bind = SUPER SHIFT, 5, movetoworkspace, 5
 
 bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+
 bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
