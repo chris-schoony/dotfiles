@@ -2,7 +2,7 @@ hl.monitor({
 	output = "DP-4",
 	mode = "3440x1440@120",
 	position = "0x0",
-	scale = 1,
+	scale = 1.25,
 })
 
 hl.env("XCURSOR_SIZE", "24")
