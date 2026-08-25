@@ -1,12 +1,8 @@
 return {
-	"neanias/everforest-nvim",
-	version = false,
-	priority = 1000,
-	config = function()
-		local theme = require("everforest")
-		theme.setup({
-			background = "hard",
-		})
-		theme.load()
-	end,
+  "rose-pine/neovim",
+  version = false,
+  priority = 1000,
+  config = function()
+    vim.cmd("colorscheme rose-pine-moon")
+  end,
 }
