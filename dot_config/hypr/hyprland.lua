@@ -18,7 +18,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("blueman-applet")
 	hl.exec_cmd("nm-applet --indicator")
 	hl.exec_cmd("hyprpaper")
-	hl.exec_cmd("shutdown 00:00 --no-wall")
 	hl.exec_cmd("udiskie & --smart-tray")
 end)
 
