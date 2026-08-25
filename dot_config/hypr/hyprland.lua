@@ -107,7 +107,7 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 
 local mainMod = "SUPER"
 local terminal = "ghostty"
-local menu = "rofi -show drun"
+local menu = "fuzzel"
 local lock = "hyprlock"
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
