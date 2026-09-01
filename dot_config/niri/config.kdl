@@ -33,6 +33,12 @@ layout {
     }
 }
 
+gestures { 
+  hot-corners {
+    off
+  }
+}
+
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "blueman-applet"
