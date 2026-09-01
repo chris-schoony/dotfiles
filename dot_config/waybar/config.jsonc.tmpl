@@ -3,7 +3,7 @@
   "margin": "8 8 0 8",
   "reload_style_on_change": true,
   "modules-left": [
-    "hyprland/workspaces",
+    "niri/workspaces",
     "mpris#kew",
     "mpris#tidal"
   ],
@@ -15,11 +15,9 @@
     "pulseaudio",
     "clock"
   ],
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": 5
-    },
-    "tooltip": false,
+  "niri/workspaces" : {
+    "format": "{icon}",
+    "display-condition": "keep-named",
   },
   "mpris#tidal": {
     "player": "tidal-hifi",
