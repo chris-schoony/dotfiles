@@ -36,8 +36,8 @@ layout {
 spawn-at-startup "swaync"
 spawn-at-startup "waybar"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "nm-applet --indicator"
-spawn-at-startup "udiskie & --smart-tray"
+spawn-sh-at-startup "nm-applet --indicator"
+spawn-sh-at-startup "udiskie &"
 spawn-sh-at-startup "swaybg -i ~/.config/wallpaper.png"
 spawn-sh-at-startup "python3 ~/.config/niri/tilemod.py"
 
