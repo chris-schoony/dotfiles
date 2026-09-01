@@ -18,7 +18,7 @@ output "DP-4" {
 }
 
 layout {
-    gaps 8
+    gaps 10
     center-focused-column "never"
     preset-column-widths {
         proportion 1.0
@@ -31,6 +31,12 @@ layout {
     border {
         off
     }
+}
+
+animations {
+  workspace-switch {
+    off
+  }
 }
 
 gestures { 
