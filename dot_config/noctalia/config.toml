@@ -44,6 +44,12 @@ widget_order = [ "lockscreen-login-box@DP-4" ]
         show_unlock_hint = true
         show_weather = true
 
+[notification]
+history_retention_hours = 1
+
+[osd.kinds]
+media = false
+
 [shell]
 font_family = "Mononoki Nerd Font Propo"
 
@@ -71,6 +77,7 @@ format = "{:%I:%M%P}"
 
 [widget.media]
 hide_when_no_media = true
+show_progress = true
 
 [widget.tray]
 hidden = [ "Network" ]
