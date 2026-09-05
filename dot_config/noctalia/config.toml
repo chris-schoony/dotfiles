@@ -1,5 +1,5 @@
 [bar.default]
-end = [ "media", "tray", "notifications", "network", "bluetooth", "volume", "session" ]
+end = [ "media", "tray", "network", "bluetooth", "volume", "session" ]
 start = [ "workspaces" ]
 
 [calendar]
