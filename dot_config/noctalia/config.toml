@@ -1,0 +1,80 @@
+[bar.default]
+end = [ "media", "tray", "notifications", "network", "bluetooth", "volume", "session" ]
+start = [ "workspaces" ]
+
+[calendar]
+
+[control_center.calendar]
+show_events_card = false
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-4" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-4"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1376.0
+    cy = 970.0
+    output = "DP-4"
+    placement_height = 1152.0
+    placement_width = 2752.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-4".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[shell]
+font_family = "Mononoki Nerd Font Propo"
+
+[theme]
+builtin = "Rosé Pine"
+community_palette = "Rose Pine Moon"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/chris/.config/wallpapers"
+
+    [wallpaper.default]
+    path = "/home/chris/.config/wallpapers/rose-pine-moon.png"
+
+    [wallpaper.last]
+    path = "/home/chris/.config/wallpapers/rose-pine-moon.png"
+
+    [wallpaper.monitors.DP-4]
+    path = "/home/chris/.config/wallpapers/rose-pine-moon.png"
+
+[widget.clock]
+format = "{:%I:%M%P}"
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.tray]
+hidden = [ "Network" ]
+
+[widget.workspaces]
+empty_color = "tertiary"
+show_labels = false

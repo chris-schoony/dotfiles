@@ -2,7 +2,6 @@ input {
     keyboard {
         xkb {
         }
-        numlock
     }
     mouse {
          accel-profile "flat"
@@ -45,12 +44,7 @@ gestures {
   }
 }
 
-spawn-at-startup "swaync"
-spawn-at-startup "waybar"
-spawn-at-startup "blueman-applet"
-spawn-sh-at-startup "nm-applet --indicator"
-spawn-sh-at-startup "udiskie &"
-spawn-sh-at-startup "swaybg -i ~/.config/wallpaper.png"
+spawn-at-startup "noctalia"
 spawn-sh-at-startup "python3 ~/.config/niri/tilemod.py"
 
 hotkey-overlay {
@@ -74,7 +68,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+X hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+X hotkey-overlay-title="Lock the Screen: noctalia" { spawn-sh "noctalia msg session lock"; }
+    Mod+S hotkey-overlay-title="Screenshot Region: noctalia" { spawn-sh "noctalia msg screenshot-region"; }
     Mod+Q repeat=false { close-window; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
