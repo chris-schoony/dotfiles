@@ -38,11 +38,8 @@ widget_order = [ "lockscreen-login-box@DP-4" ]
         layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
-        show_login_button = true
-        show_media = true
         show_session_buttons = true
         show_unlock_hint = true
-        show_weather = true
 
 [notification]
 history_retention_hours = 1
