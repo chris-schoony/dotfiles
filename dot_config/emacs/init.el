@@ -72,6 +72,9 @@
   (setq doom-modeline-major-mode-color-icon t)
   (setq doom-modeline-indent-info nil))
 
+(use-package magit
+  :ensure t)
+
 ;; BUILT IN PACKAGES CONFIG
 (use-package savehist
   :ensure nil
