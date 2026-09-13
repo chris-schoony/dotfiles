@@ -20,6 +20,9 @@ return {
 			"tsx",
 			"typescript",
 			"c",
+			"gdscript",
+			"godot_resource",
+			"gdshader",
 		})
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
@@ -38,6 +41,9 @@ return {
 				"tsx",
 				"typescript",
 				"c",
+				"gdscript",
+				"godot_resource",
+				"gdshader",
 			},
 			callback = function()
 				vim.treesitter.start()
