@@ -46,6 +46,7 @@ gestures {
 
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "python3 ~/.config/niri/tilemod.py"
+spawn-sh-at-startup "shutdown 00:00"
 
 hotkey-overlay {
     skip-at-startup
