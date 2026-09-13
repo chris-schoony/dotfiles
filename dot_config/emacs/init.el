@@ -1,0 +1,84 @@
+;;; -*- lexical-binding: t -*-
+
+;; CUSTOM FILE
+(setq custom-file (locate-user-emacs-file "custom.el"))
+(load custom-file t)
+
+;; SETTINGS
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tooltip-mode -1)
+(global-display-line-numbers-mode)
+
+(setq package-enable-at-startup nil)
+(setq inhibit-startup-message t)
+
+(set-face-attribute 'default nil :font "Mononoki Nerd Font Mono" :height 185)
+
+;; STRAIGHT.EL BOOTSTRAP AND CONFIG
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
+
+;; PACKAGES
+(use-package base16-theme
+  :ensure t
+  :config
+  (load-theme 'base16-rose-pine-moon t))
+
+(use-package vertico
+  :ensure t
+  :config
+  (vertico-mode 1))
+
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode 1))
+
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic))
+  (setq completion-category-defaults nil))
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-vcs-icon t)
+  (setq doom-modeline-vcs-max-length 15)
+  (setq doom-modeline-vcs-display-function #'doom-modeline-vcs-name)
+  (setq doom-modeline-percent-position nil)
+  (setq doom-modeline-position-line-format nil)
+  (setq doom-modeline-buffer-encoding nil)
+  (setq doom-modeline-major-mode-icon t)
+  (setq doom-modeline-major-mode-color-icon t)
+  (setq doom-modeline-indent-info nil))
+
+;; BUILT IN PACKAGES CONFIG
+(use-package savehist
+  :ensure nil
+  :config
+  (savehist-mode 1))
+
+(use-package delsel
+  :ensure nil
+  :config
+  (delete-selection-mode 1))
