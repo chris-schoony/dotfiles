@@ -84,7 +84,9 @@
   (define-fringe-bitmap 'git-gutter-fr:modified [224]
     nil nil '(center repeated))
   (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240]
-    nil nil 'bottom))
+    nil nil 'bottom)
+  (with-eval-after-load 'magit
+    (add-hook 'magit-post-refresh-hook #'git-gutter:update-all-windows)))
 
 (use-package vterm
   :ensure t
