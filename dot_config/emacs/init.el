@@ -107,7 +107,14 @@
                            (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
                 (display-buffer-reuse-window display-buffer-at-bottom)
                 (reusable-frames . visible)
-                (window-height . 0.3))))
+                (window-height . 0.5))))
+
+(use-package treesit-auto
+  :custom
+  (treesit-auto-install 'prompt)
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode 1))
 
 ;; BUILT IN PACKAGES CONFIG
 (use-package savehist
