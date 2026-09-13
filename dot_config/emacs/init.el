@@ -91,7 +91,7 @@
 (use-package vterm
   :ensure t
   :config
-  (add-hook 'vterm-mode-hook (lambda() (display-line-numbers-mode -1))))
+  (add-hook 'vterm-mode-hook (lambda() (setq display-line-numbers nil))))
 
 (use-package vterm-toggle
   :ensure t
