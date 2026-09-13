@@ -46,7 +46,6 @@ gestures {
 
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "python3 ~/.config/niri/tilemod.py"
-spawn-sh-at-startup "emacs --daemon"
 
 hotkey-overlay {
     skip-at-startup
@@ -71,7 +70,6 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+X hotkey-overlay-title="Lock the Screen: noctalia" { spawn-sh "noctalia msg session lock"; }
     Mod+S hotkey-overlay-title="Screenshot Region: noctalia" { spawn-sh "noctalia msg screenshot-region"; }
-    Mod+E hotkey-overlay-title="Open Emacs Client: emacs" { spawn "emacsclient" "-c"; }
     Mod+Q repeat=false { close-window; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
