@@ -86,6 +86,27 @@
   (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240]
     nil nil 'bottom))
 
+(use-package vterm
+  :ensure t
+  :config
+  (add-hook 'vterm-mode-hook (lambda() (display-line-numbers-mode -1))))
+
+(use-package vterm-toggle
+  :ensure t
+  :config
+  (global-set-key [f2] 'vterm-toggle)
+  (define-key vterm-mode-map [f2] 'vterm-toggle)
+  (setq vterm-toggle-fullscreen-p nil)
+  (add-to-list 'display-buffer-alist
+             '((lambda (buffer-or-name _)
+                   (let ((buffer (get-buffer buffer-or-name)))
+                     (with-current-buffer buffer
+                       (or (equal major-mode 'vterm-mode)
+                           (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
+                (display-buffer-reuse-window display-buffer-at-bottom)
+                (reusable-frames . visible)
+                (window-height . 0.3))))
+
 ;; BUILT IN PACKAGES CONFIG
 (use-package savehist
   :ensure nil
