@@ -76,6 +76,8 @@ binds {
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
+    Mod+M     { maximize-window-to-edges; }
+    Mod+Shift+M     hotkey-overlay-title="Toggle bar: noctalia" { spawn-sh "noctalia msg bar-toggle"; }
     Mod+Shift+H     { move-column-left; }
     Mod+Shift+J     { move-window-down; }
     Mod+Shift+K     { move-window-up; }
