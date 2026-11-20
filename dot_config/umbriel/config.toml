@@ -68,7 +68,7 @@ xwayland_native_resolution = true
 [output.DP-4]
 mode = "3440x1440@120"
 position = [0, 0]
-scale = 1.5
+scale = 1.25
 workspaces = 5
 
 # ==============================================================================
